@@ -116,7 +116,7 @@ export default function AnalysisPanel() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: active.color,
           }}>
-            {React.cloneElement(active.icon as React.ReactElement, { size: 24 })}
+            {mode === 'progress' ? <TrendingUp size={24} /> : <AlertTriangle size={24} />}
           </div>
           <div>
             <p style={{ fontWeight: 700, color: 'var(--text-1)', marginBottom: 4 }}>
